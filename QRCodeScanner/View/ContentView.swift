@@ -8,14 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var defaultTab = 1
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView(selection: $defaultTab) {
+            ScannerView()
+                .tabItem {
+                    Image(systemName: "qrcode.viewfinder")
+                    Text("Scan")
+                }
+                .tag(1)
+            
+            ScannerView()
+                .tabItem {
+                    Image(systemName: "qrcode")
+                    Text("Generate")
+                }
+                .tag(2)
+            
+            ScannerView()
+                .tabItem {
+                    Image(systemName: "clock.arrow.circlepath")
+                    Text("Recent")
+                }
+                .tag(3)
+            
+            ScannerView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+                }
+                .tag(4)
         }
-        .padding()
+        .accentColor(Color("Blue"))
     }
 }
 
