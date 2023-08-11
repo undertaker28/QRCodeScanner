@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftyuserdefaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sunshinejr/SwiftyUserDefaults",
+      "state" : {
+        "revision" : "1930a81a299b074fd72eee09e88e452ad37dc34d",
+        "version" : "5.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

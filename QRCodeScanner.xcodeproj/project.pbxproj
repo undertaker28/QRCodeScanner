@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9D6BE852A8670DD0044D95F /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = E9D6BE842A8670DD0044D95F /* SwiftyUserDefaults */; };
 		E9FEE8482A865077003144D4 /* QRCodeScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEE8472A865077003144D4 /* QRCodeScannerApp.swift */; };
 		E9FEE84A2A865077003144D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEE8492A865077003144D4 /* ContentView.swift */; };
 		E9FEE84C2A865078003144D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FEE84B2A865078003144D4 /* Assets.xcassets */; };
@@ -26,12 +27,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D6BE852A8670DD0044D95F /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9D6BE7C2A866FBE0044D95F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9D6BE7D2A866FF10044D95F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9FEE8492A865077003144D4 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9D6BE7E2A866FFD0044D95F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E9D6BE7F2A86700C0044D95F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9D6BE802A8670160044D95F /* Assets */,
+				E9FEE8472A865077003144D4 /* QRCodeScannerApp.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E9D6BE802A8670160044D95F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E9FEE84B2A865078003144D4 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E9D6BE812A8670330044D95F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9D6BE822A8670460044D95F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E9FEE83B2A865077003144D4 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +106,12 @@
 		E9FEE8462A865077003144D4 /* QRCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
-				E9FEE8472A865077003144D4 /* QRCodeScannerApp.swift */,
-				E9FEE8492A865077003144D4 /* ContentView.swift */,
-				E9FEE84B2A865078003144D4 /* Assets.xcassets */,
+				E9D6BE7C2A866FBE0044D95F /* Model */,
+				E9D6BE7D2A866FF10044D95F /* View */,
+				E9D6BE7E2A866FFD0044D95F /* ViewModel */,
+				E9D6BE822A8670460044D95F /* Helpers */,
+				E9D6BE812A8670330044D95F /* Extensions */,
+				E9D6BE7F2A86700C0044D95F /* Resources */,
 				E9FEE84D2A865078003144D4 /* Preview Content */,
 			);
 			path = QRCodeScanner;
@@ -83,6 +141,9 @@
 			dependencies = (
 			);
 			name = QRCodeScanner;
+			packageProductDependencies = (
+				E9D6BE842A8670DD0044D95F /* SwiftyUserDefaults */,
+			);
 			productName = QRCodeScanner;
 			productReference = E9FEE8442A865077003144D4 /* QRCodeScanner.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +172,9 @@
 				Base,
 			);
 			mainGroup = E9FEE83B2A865077003144D4;
+			packageReferences = (
+				E9D6BE832A8670DC0044D95F /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+			);
 			productRefGroup = E9FEE8452A865077003144D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +403,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9D6BE832A8670DC0044D95F /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9D6BE842A8670DD0044D95F /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9D6BE832A8670DC0044D95F /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9FEE83C2A865077003144D4 /* Project object */;
 }
