@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E9D6BE852A8670DD0044D95F /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = E9D6BE842A8670DD0044D95F /* SwiftyUserDefaults */; };
+		E9D6BE872A8671B60044D95F /* ScannedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D6BE862A8671B60044D95F /* ScannedObject.swift */; };
 		E9FEE8482A865077003144D4 /* QRCodeScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEE8472A865077003144D4 /* QRCodeScannerApp.swift */; };
 		E9FEE84A2A865077003144D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEE8492A865077003144D4 /* ContentView.swift */; };
 		E9FEE84C2A865078003144D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FEE84B2A865078003144D4 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9D6BE862A8671B60044D95F /* ScannedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedObject.swift; sourceTree = "<group>"; };
 		E9FEE8442A865077003144D4 /* QRCodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FEE8472A865077003144D4 /* QRCodeScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerApp.swift; sourceTree = "<group>"; };
 		E9FEE8492A865077003144D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +39,7 @@
 		E9D6BE7C2A866FBE0044D95F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E9D6BE862A8671B60044D95F /* ScannedObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D6BE872A8671B60044D95F /* ScannedObject.swift in Sources */,
 				E9FEE84A2A865077003144D4 /* ContentView.swift in Sources */,
 				E9FEE8482A865077003144D4 /* QRCodeScannerApp.swift in Sources */,
 			);
