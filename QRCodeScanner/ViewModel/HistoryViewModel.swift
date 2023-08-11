@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftyUserDefaults
 import AVFoundation
 
-class HistoryViewModel: ObservableObject {
+final class HistoryViewModel: ObservableObject {
     @Published var recentList: [ScannedObject] = []
     @Published var flashOn: Bool = false
     

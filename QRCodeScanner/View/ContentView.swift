@@ -26,14 +26,14 @@ struct ContentView: View {
                 }
                 .tag(2)
             
-            ScannerView()
+            HistoryView()
                 .tabItem {
                     Image(systemName: "clock.arrow.circlepath")
                     Text("Recent")
                 }
                 .tag(3)
             
-            ScannerView()
+            SettingsView()
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")

@@ -13,6 +13,7 @@
 		E9C5CA1A2A86AE03008AF27D /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C5CA192A86AE03008AF27D /* HistoryRow.swift */; };
 		E9C5CA1C2A86AE2C008AF27D /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C5CA1B2A86AE2C008AF27D /* HistoryViewModel.swift */; };
 		E9C5CA1F2A86B405008AF27D /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C5CA1E2A86B405008AF27D /* HistoryView.swift */; };
+		E9C5CA272A86E06F008AF27D /* ShareActivityItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C5CA262A86E06F008AF27D /* ShareActivityItemSource.swift */; };
 		E9D6BE852A8670DD0044D95F /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = E9D6BE842A8670DD0044D95F /* SwiftyUserDefaults */; };
 		E9D6BE872A8671B60044D95F /* ScannedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D6BE862A8671B60044D95F /* ScannedObject.swift */; };
 		E9D6BE892A8674950044D95F /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D6BE882A8674950044D95F /* ScannerView.swift */; };
@@ -34,6 +35,7 @@
 		E9C5CA192A86AE03008AF27D /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
 		E9C5CA1B2A86AE2C008AF27D /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		E9C5CA1E2A86B405008AF27D /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		E9C5CA262A86E06F008AF27D /* ShareActivityItemSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivityItemSource.swift; sourceTree = "<group>"; };
 		E9D6BE862A8671B60044D95F /* ScannedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedObject.swift; sourceTree = "<group>"; };
 		E9D6BE882A8674950044D95F /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		E9D6BE8A2A8674F50044D95F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		E9D6BE822A8670460044D95F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E9C5CA262A86E06F008AF27D /* ShareActivityItemSource.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				E9D6BE892A8674950044D95F /* ScannerView.swift in Sources */,
 				E9C5CA1A2A86AE03008AF27D /* HistoryRow.swift in Sources */,
 				E9FEE84A2A865077003144D4 /* ContentView.swift in Sources */,
+				E9C5CA272A86E06F008AF27D /* ShareActivityItemSource.swift in Sources */,
 				E9D6BE8F2A8676B30044D95F /* DefaultsKeys+Ex.swift in Sources */,
 				E9FEE8482A865077003144D4 /* QRCodeScannerApp.swift in Sources */,
 				E9C5CA182A86ABE7008AF27D /* SettingsViewModel.swift in Sources */,
