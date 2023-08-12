@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HistoryView: View {
-    @ObservedObject var historyViewModel = HistoryViewModel()
+    @ObservedObject private var historyViewModel = HistoryViewModel()
     
     var body: some View {
         NavigationView {

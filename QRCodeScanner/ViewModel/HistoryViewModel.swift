@@ -6,9 +6,7 @@
 //
 
 import Foundation
-import SwiftUI
 import SwiftyUserDefaults
-import AVFoundation
 
 final class HistoryViewModel: ObservableObject {
     @Published var recentList: [ScannedObject] = []

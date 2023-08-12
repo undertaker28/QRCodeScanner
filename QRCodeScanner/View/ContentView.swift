@@ -19,7 +19,7 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            ScannerView()
+            GenerateView()
                 .tabItem {
                     Image(systemName: "qrcode")
                     Text("Generate")

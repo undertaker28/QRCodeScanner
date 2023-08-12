@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @ObservedObject var settingsViewModel = SettingsViewModel()
-    
-    init() {
-        UITableView.appearance().separatorStyle = .none
-    }
+    @ObservedObject private var settingsViewModel = SettingsViewModel()
     
     var body: some View {
         NavigationView {

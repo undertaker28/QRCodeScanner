@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91D1BE12A8778FA00904254 /* GenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D1BE02A8778FA00904254 /* GenerateView.swift */; };
+		E91D1BE32A877A3900904254 /* GenerateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D1BE22A877A3900904254 /* GenerateViewModel.swift */; };
 		E9C5CA122A86AA73008AF27D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C5CA112A86AA73008AF27D /* SettingsView.swift */; };
 		E9C5CA162A86AB95008AF27D /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9C5CA152A86AB95008AF27D /* MarkPro-Bold.otf */; };
 		E9C5CA182A86ABE7008AF27D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C5CA172A86ABE7008AF27D /* SettingsViewModel.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E91D1BE02A8778FA00904254 /* GenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateView.swift; sourceTree = "<group>"; };
+		E91D1BE22A877A3900904254 /* GenerateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewModel.swift; sourceTree = "<group>"; };
 		E9C5CA112A86AA73008AF27D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E9C5CA142A86AB80008AF27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C5CA152A86AB95008AF27D /* MarkPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.otf"; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			children = (
 				E9FEE8492A865077003144D4 /* ContentView.swift */,
 				E9D6BE882A8674950044D95F /* ScannerView.swift */,
+				E91D1BE02A8778FA00904254 /* GenerateView.swift */,
 				E9C5CA1E2A86B405008AF27D /* HistoryView.swift */,
 				E9C5CA192A86AE03008AF27D /* HistoryRow.swift */,
 				E9C5CA112A86AA73008AF27D /* SettingsView.swift */,
@@ -92,6 +97,7 @@
 		E9D6BE7E2A866FFD0044D95F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E91D1BE22A877A3900904254 /* GenerateViewModel.swift */,
 				E9C5CA1B2A86AE2C008AF27D /* HistoryViewModel.swift */,
 				E9C5CA172A86ABE7008AF27D /* SettingsViewModel.swift */,
 			);
@@ -252,11 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91D1BE32A877A3900904254 /* GenerateViewModel.swift in Sources */,
 				E9D6BE912A8676D30044D95F /* Date+Ex.swift in Sources */,
 				E9C5CA1F2A86B405008AF27D /* HistoryView.swift in Sources */,
 				E9C5CA122A86AA73008AF27D /* SettingsView.swift in Sources */,
 				E9C5CA1C2A86AE2C008AF27D /* HistoryViewModel.swift in Sources */,
 				E9D6BE872A8671B60044D95F /* ScannedObject.swift in Sources */,
+				E91D1BE12A8778FA00904254 /* GenerateView.swift in Sources */,
 				E9D6BE932A8676F00044D95F /* String+Ex.swift in Sources */,
 				E9D6BE892A8674950044D95F /* ScannerView.swift in Sources */,
 				E9C5CA1A2A86AE03008AF27D /* HistoryRow.swift in Sources */,
