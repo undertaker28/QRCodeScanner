@@ -32,7 +32,7 @@ struct GenerateView: View {
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 20))
                 
-                TextField("Text to Generate", text: $data)
+                TextField("Text to generate", text: $data)
                     .font(Font.custom("MarkPro-Bold", size: 12))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E91D1BE12A8778FA00904254 /* GenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D1BE02A8778FA00904254 /* GenerateView.swift */; };
 		E91D1BE32A877A3900904254 /* GenerateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D1BE22A877A3900904254 /* GenerateViewModel.swift */; };
+		E91D1BE52A87803000904254 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D1BE42A87803000904254 /* SplashView.swift */; };
 		E9C5CA122A86AA73008AF27D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C5CA112A86AA73008AF27D /* SettingsView.swift */; };
 		E9C5CA162A86AB95008AF27D /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9C5CA152A86AB95008AF27D /* MarkPro-Bold.otf */; };
 		E9C5CA182A86ABE7008AF27D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C5CA172A86ABE7008AF27D /* SettingsViewModel.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		E91D1BE02A8778FA00904254 /* GenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateView.swift; sourceTree = "<group>"; };
 		E91D1BE22A877A3900904254 /* GenerateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewModel.swift; sourceTree = "<group>"; };
+		E91D1BE42A87803000904254 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		E9C5CA112A86AA73008AF27D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E9C5CA142A86AB80008AF27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C5CA152A86AB95008AF27D /* MarkPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.otf"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		E9D6BE7D2A866FF10044D95F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E91D1BE42A87803000904254 /* SplashView.swift */,
 				E9FEE8492A865077003144D4 /* ContentView.swift */,
 				E9D6BE882A8674950044D95F /* ScannerView.swift */,
 				E91D1BE02A8778FA00904254 /* GenerateView.swift */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E91D1BE32A877A3900904254 /* GenerateViewModel.swift in Sources */,
+				E91D1BE52A87803000904254 /* SplashView.swift in Sources */,
 				E9D6BE912A8676D30044D95F /* Date+Ex.swift in Sources */,
 				E9C5CA1F2A86B405008AF27D /* HistoryView.swift in Sources */,
 				E9C5CA122A86AA73008AF27D /* SettingsView.swift in Sources */,
