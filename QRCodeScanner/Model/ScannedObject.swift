@@ -13,7 +13,7 @@ enum ObjectType: Int, Codable {
     case text
 }
 
-struct ScannedObject: Identifiable, Codable, DefaultsSerializable {
+struct ScannedObject: Identifiable, Codable, DefaultsSerializable, Equatable {
     var id = UUID()
     let data: String
     let scanDate: String?

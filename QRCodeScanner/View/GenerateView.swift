@@ -11,8 +11,6 @@ struct GenerateView: View {
     @ObservedObject private var generateViewModel = GenerateViewModel()
     @State private var data = ""
     @State private var showShareSheet = false
-    @State private var showingAlert = false
-    @State private var alertMessage = ""
     @State private var clipboardValue = ""
     
     var body: some View {
@@ -51,18 +49,6 @@ struct GenerateView: View {
                     }
                 
                 Spacer()
-                    .onAppear {
-                        if let value = UIPasteboard.general.string {
-                            self.clipboardValue = value
-                            self.alertMessage = "There is already data copied to the clipboard.\n" + value + "\nDo you want to generate QR with this data?"
-                            self.showingAlert = true
-                        }
-                    }
-                    .alert(isPresented: $showingAlert) {
-                        Alert(title: Text("Info"), message: Text(self.alertMessage), primaryButton: .destructive(Text("Generate")) {
-                            self.data = self.clipboardValue
-                        }, secondaryButton: .destructive(Text("No")))
-                    }
             }
             .navigationBarTitle("Generate")
         }
