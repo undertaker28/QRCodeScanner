@@ -24,11 +24,11 @@ struct ScannerView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 8) {
-                if self.scannedObject != nil {
-                    ScannerResultView(scannedObject: self.scannedObject!,
+                if scannedObject != nil {
+                    ScannerResultView(scannedObject: scannedObject!,
                                       parentView: self,
-                                      copyDataByDefault: self.scannerViewModel.checkIfCopyByDefault(),
-                                      browseByDefault: self.scannerViewModel.checkIfBrowseByDefault())
+                                      copyDataByDefault: scannerViewModel.checkIfCopyByDefault(),
+                                      browseByDefault: scannerViewModel.checkIfBrowseByDefault())
                     .onDisappear {
                         if !session.isRunning && cameraPermission == .approved {
                             reactivateCamera()
@@ -77,7 +77,7 @@ struct ScannerView: View {
                 }
             }
             .padding(15)
-            .navigationBarTitle((self.scannedObject == nil) ? "Scanning..." : "Scanning Result", displayMode: .inline)
+            .navigationBarTitle(scannedObject == nil ? "Scanning..." : "Scanning Result", displayMode: .inline)
             .onAppear(perform: checkCameraPermission)
             .alert(errorMessage, isPresented: $showError) {
                 if cameraPermission == .denied {
@@ -108,25 +108,25 @@ struct ScannerView: View {
         }
     }
     
-    func reactivateCamera() {
+    private func reactivateCamera() {
         DispatchQueue.global(qos: .background).async {
             session.startRunning()
         }
     }
     
-    func activateScannerAnimation() {
+    private func activateScannerAnimation() {
         withAnimation(.easeInOut(duration: 0.85).delay(0.1).repeatForever(autoreverses: true)) {
             isScanning = true
         }
     }
     
-    func deactivateScannerAnimation() {
+    private func deactivateScannerAnimation() {
         withAnimation(.easeInOut(duration: 0.85)) {
             isScanning = false
         }
     }
     
-    func checkCameraPermission() {
+    private func checkCameraPermission() {
         if !isCheckedCameraPermission {
             Task {
                 switch AVCaptureDevice.authorizationStatus(for: .video) {
@@ -154,9 +154,10 @@ struct ScannerView: View {
             }
         }
         isCheckedCameraPermission = true
+        reactivateCamera()
     }
     
-    func setupCamera() {
+    private func setupCamera() {
         do {
             guard let device = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInUltraWideCamera], mediaType: .video, position: .back).devices.first else {
                 presentError("Unknown device error")
@@ -185,7 +186,7 @@ struct ScannerView: View {
         }
     }
     
-    func presentError(_ message: String) {
+    private func presentError(_ message: String) {
         errorMessage = message
         showError.toggle()
     }

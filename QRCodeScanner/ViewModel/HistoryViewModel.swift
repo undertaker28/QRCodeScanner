@@ -10,21 +10,25 @@ import SwiftyUserDefaults
 
 final class HistoryViewModel: ObservableObject {
     @Published var recentList: [ScannedObject] = []
-    @Published var flashOn: Bool = false
     
     func fetchRecentList() {
-        self.recentList.removeAll()
+        recentList.removeAll()
         
         if let historyList = Defaults.historyList {
-            self.recentList = historyList
+            recentList = historyList
         } else {
-            self.recentList = []
+            recentList = []
         }
     }
     
     func deleteRecentItem(scannedObject: ScannedObject) {
-        let remainingList = self.recentList.filter { $0.id != scannedObject.id }
-        self.recentList = remainingList
+        let remainingList = recentList.filter { $0.id != scannedObject.id }
+        recentList = remainingList
         Defaults.historyList = remainingList
+    }
+    
+    func deleteRecentList() {
+        recentList.removeAll()
+        Defaults.historyList = []
     }
 }

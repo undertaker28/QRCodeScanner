@@ -15,9 +15,7 @@ final class QRScannerDelegate: NSObject, ObservableObject, AVCaptureMetadataOutp
         if let metaObject = metadataObjects.first {
             guard let readableObject = metaObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let code = readableObject.stringValue else { return }
-            print(code)
             scannedObject = ScannedObject(data: code, scanDate: Date().toString(format: DateFormat.dd_mm_yyyy), type: code.verifyURL() ? .url : .text)
-            print(scannedObject)
         }
     }
 }

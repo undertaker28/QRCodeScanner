@@ -79,6 +79,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E98FF0122A8BF4A400AD1380 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				E91D1BE42A87803000904254 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		E98FF0132A8BF4B600AD1380 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				E9D6BE882A8674950044D95F /* ScannerView.swift */,
+				E98FF00E2A8BEA4E00AD1380 /* ScannerResultView.swift */,
+				E94522392A8BD695004E8FFC /* CameraView.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		E98FF0142A8BF4CB00AD1380 /* Generate */ = {
+			isa = PBXGroup;
+			children = (
+				E91D1BE02A8778FA00904254 /* GenerateView.swift */,
+			);
+			path = Generate;
+			sourceTree = "<group>";
+		};
+		E98FF0152A8BF4DD00AD1380 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				E9C5CA1E2A86B405008AF27D /* HistoryView.swift */,
+				E9C5CA192A86AE03008AF27D /* HistoryRow.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		E98FF0162A8BF4F500AD1380 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E9C5CA112A86AA73008AF27D /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		E9C5CA132A86AB51008AF27D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,15 +141,12 @@
 		E9D6BE7D2A866FF10044D95F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E91D1BE42A87803000904254 /* SplashView.swift */,
+				E98FF0122A8BF4A400AD1380 /* Splash */,
+				E98FF0132A8BF4B600AD1380 /* Scanner */,
+				E98FF0142A8BF4CB00AD1380 /* Generate */,
+				E98FF0152A8BF4DD00AD1380 /* History */,
+				E98FF0162A8BF4F500AD1380 /* Settings */,
 				E9FEE8492A865077003144D4 /* ContentView.swift */,
-				E9D6BE882A8674950044D95F /* ScannerView.swift */,
-				E98FF00E2A8BEA4E00AD1380 /* ScannerResultView.swift */,
-				E94522392A8BD695004E8FFC /* CameraView.swift */,
-				E91D1BE02A8778FA00904254 /* GenerateView.swift */,
-				E9C5CA1E2A86B405008AF27D /* HistoryView.swift */,
-				E9C5CA192A86AE03008AF27D /* HistoryRow.swift */,
-				E9C5CA112A86AA73008AF27D /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,10 +154,10 @@
 		E9D6BE7E2A866FFD0044D95F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E98FF0102A8BEB5900AD1380 /* ScannerViewModel.swift */,
 				E91D1BE22A877A3900904254 /* GenerateViewModel.swift */,
 				E9C5CA1B2A86AE2C008AF27D /* HistoryViewModel.swift */,
 				E9C5CA172A86ABE7008AF27D /* SettingsViewModel.swift */,
-				E98FF0102A8BEB5900AD1380 /* ScannerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -357,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -411,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -434,12 +474,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QRCodeScanner/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QR;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,12 +509,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QRCodeScanner/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QR;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

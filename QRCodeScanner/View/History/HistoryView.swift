@@ -14,13 +14,21 @@ struct HistoryView: View {
         NavigationView {
             VStack {
                 List(historyViewModel.recentList) { data in
-                    HistoryRow(scannedObject: data, historyViewModel: self.historyViewModel)
+                    HistoryRow(scannedObject: data, historyViewModel: historyViewModel)
+                }
+                .toolbar {
+                    Button(action: {
+                        historyViewModel.deleteRecentList()
+                    }) {
+                        Image(systemName: "xmark.circle")
+                            .foregroundColor(.black)
+                    }
                 }
             }
             .onAppear {
-                self.historyViewModel.fetchRecentList()
+                historyViewModel.fetchRecentList()
             }
-            .navigationBarTitle("Recent")
+            .navigationBarTitle("History")
         }
     }
 }

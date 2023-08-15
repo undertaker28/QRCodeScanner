@@ -14,7 +14,7 @@ struct ScannerResultView: View {
     var browseByDefault: Bool
     
     @State private var showingAlert = false
-    @State private var alertMsg = ""
+    @State private var alertMessage = ""
     @State private var showBrowseButton = false
     
     var body: some View {
@@ -90,7 +90,7 @@ struct ScannerResultView: View {
                             let pasteboard = UIPasteboard.general
                             pasteboard.string = self.scannedObject.data
                             
-                            self.alertMsg = "Text copied to clipboard!"
+                            self.alertMessage = "Text copied to clipboard!"
                             self.showingAlert = true
                         }
                     
@@ -102,7 +102,7 @@ struct ScannerResultView: View {
             .foregroundColor(.white)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text("Success"), message: Text(self.alertMsg), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Success"), message: Text(self.alertMessage), dismissButton: .default(Text("OK")))
             }
             .onAppear() {
                 if self.scannedObject.data.isValidURL() {

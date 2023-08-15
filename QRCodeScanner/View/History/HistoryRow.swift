@@ -17,7 +17,7 @@ struct HistoryRow: View {
     var body: some View {
         HStack {
             VStack {
-                Image(systemName: (scannedObject?.type == .url) ? "link" : "t.circle")
+                Image(systemName: scannedObject?.type == .url ? "link" : "t.circle")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 24, alignment: .center)
