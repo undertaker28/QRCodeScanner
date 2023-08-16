@@ -68,7 +68,7 @@ struct HistoryRow: View {
         }
         .foregroundColor(.white)
         .frame(height: 60)
-        .background(Color("Blue"))
+        .background(Color.accentColor)
         .cornerRadius(15)
         .alert(isPresented: $showingAlert) {
             Alert(title: Text("Success"), message: Text(self.alertMessage), dismissButton: .default(Text("OK")))

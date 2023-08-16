@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91518DF2A8D45E3002D97E7 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91518DE2A8D45E3002D97E7 /* Icons.xcassets */; };
+		E91518E12A8D5B94002D97E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91518E02A8D5B94002D97E7 /* Constants.swift */; };
 		E91D1BE12A8778FA00904254 /* GenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D1BE02A8778FA00904254 /* GenerateView.swift */; };
 		E91D1BE32A877A3900904254 /* GenerateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D1BE22A877A3900904254 /* GenerateViewModel.swift */; };
 		E91D1BE52A87803000904254 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D1BE42A87803000904254 /* SplashView.swift */; };
 		E945223A2A8BD695004E8FFC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94522392A8BD695004E8FFC /* CameraView.swift */; };
-		E945223C2A8BD946004E8FFC /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945223B2A8BD946004E8FFC /* Permission.swift */; };
 		E945223E2A8BDE06004E8FFC /* QRScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945223D2A8BDE06004E8FFC /* QRScannerDelegate.swift */; };
 		E98FF00D2A8BE91B00AD1380 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98FF00C2A8BE91B00AD1380 /* DateFormat.swift */; };
 		E98FF00F2A8BEA4E00AD1380 /* ScannerResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98FF00E2A8BEA4E00AD1380 /* ScannerResultView.swift */; };
@@ -37,11 +38,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E91518DE2A8D45E3002D97E7 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		E91518E02A8D5B94002D97E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E91D1BE02A8778FA00904254 /* GenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateView.swift; sourceTree = "<group>"; };
 		E91D1BE22A877A3900904254 /* GenerateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewModel.swift; sourceTree = "<group>"; };
 		E91D1BE42A87803000904254 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		E94522392A8BD695004E8FFC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		E945223B2A8BD946004E8FFC /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		E945223D2A8BDE06004E8FFC /* QRScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerDelegate.swift; sourceTree = "<group>"; };
 		E98FF00C2A8BE91B00AD1380 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		E98FF00E2A8BEA4E00AD1380 /* ScannerResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerResultView.swift; sourceTree = "<group>"; };
@@ -167,7 +169,7 @@
 			children = (
 				E9D6BE802A8670160044D95F /* Assets */,
 				E9C5CA132A86AB51008AF27D /* Fonts */,
-				E945223B2A8BD946004E8FFC /* Permission.swift */,
+				E91518E02A8D5B94002D97E7 /* Constants.swift */,
 				E9FEE8472A865077003144D4 /* QRCodeScannerApp.swift */,
 				E9C5CA142A86AB80008AF27D /* Info.plist */,
 			);
@@ -179,6 +181,7 @@
 			children = (
 				E9FEE84B2A865078003144D4 /* Assets.xcassets */,
 				E9D6BE8A2A8674F50044D95F /* Colors.xcassets */,
+				E91518DE2A8D45E3002D97E7 /* Icons.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9D6BE8B2A8674F50044D95F /* Colors.xcassets in Resources */,
+				E91518DF2A8D45E3002D97E7 /* Icons.xcassets in Resources */,
 				E9C5CA162A86AB95008AF27D /* MarkPro-Bold.otf in Resources */,
 				E9FEE84F2A865078003144D4 /* Preview Assets.xcassets in Resources */,
 				E9FEE84C2A865078003144D4 /* Assets.xcassets in Resources */,
@@ -325,6 +329,7 @@
 				E9C5CA1F2A86B405008AF27D /* HistoryView.swift in Sources */,
 				E9C5CA122A86AA73008AF27D /* SettingsView.swift in Sources */,
 				E9C5CA1C2A86AE2C008AF27D /* HistoryViewModel.swift in Sources */,
+				E91518E12A8D5B94002D97E7 /* Constants.swift in Sources */,
 				E9D6BE872A8671B60044D95F /* ScannedObject.swift in Sources */,
 				E945223E2A8BDE06004E8FFC /* QRScannerDelegate.swift in Sources */,
 				E91D1BE12A8778FA00904254 /* GenerateView.swift in Sources */,
@@ -335,7 +340,6 @@
 				E98FF0112A8BEB5900AD1380 /* ScannerViewModel.swift in Sources */,
 				E945223A2A8BD695004E8FFC /* CameraView.swift in Sources */,
 				E9C5CA272A86E06F008AF27D /* ShareActivityItemSource.swift in Sources */,
-				E945223C2A8BD946004E8FFC /* Permission.swift in Sources */,
 				E98FF00F2A8BEA4E00AD1380 /* ScannerResultView.swift in Sources */,
 				E9D6BE8F2A8676B30044D95F /* DefaultsKeys+Ex.swift in Sources */,
 				E9FEE8482A865077003144D4 /* QRCodeScannerApp.swift in Sources */,
@@ -351,6 +355,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon1 AppIcon2 AppIcon3 AppIcon4";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -411,6 +417,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon1 AppIcon2 AppIcon3 AppIcon4";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

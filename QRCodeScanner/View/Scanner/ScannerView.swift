@@ -12,7 +12,7 @@ struct ScannerView: View {
     @ObservedObject private var scannerViewModel = ScannerViewModel()
     @State private var isScanning: Bool = false
     @State private var session: AVCaptureSession = .init()
-    @State private var cameraPermission: Permission = .idle
+    @State private var cameraPermission: Constants.Permission = .idle
     @State private var qrOutput: AVCaptureMetadataOutput = .init()
     @State private var errorMessage: String = ""
     @State private var showError: Bool = false
@@ -37,12 +37,12 @@ struct ScannerView: View {
                     }
                 } else {
                     Text("Place the QR code inside the area")
-                        .font(.title3)
+                        .font(.custom("MarkPro-Bold", size: 20))
                         .foregroundColor(.black.opacity(0.8))
                         .padding(.top, 20)
                     
                     Text("Scanning will start automatically")
-                        .font(.callout)
+                        .font(.custom("MarkPro-Bold", size: 16))
                         .foregroundColor(.gray)
                     
                     Spacer(minLength: 0)
@@ -59,14 +59,14 @@ struct ScannerView: View {
                                 
                                 RoundedRectangle(cornerRadius: 2, style: .circular)
                                     .trim(from: 0.61, to: 0.64)
-                                    .stroke(Color("Blue"), style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                                    .stroke(Color.accentColor, style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                                     .rotationEffect(.init(degrees: rotation))
                             }
                         }
                         .frame(width: size.width, height: size.width)
                         .overlay(alignment: .top, content: {
                             Rectangle()
-                                .fill(Color("Blue"))
+                                .fill(Color.accentColor)
                                 .frame(height: 2.5)
                                 .shadow(color: .black.opacity(0.8), radius: 8, x: 0, y: isScanning ? 15 : -15)
                                 .offset(y: isScanning ? size.width : 0)

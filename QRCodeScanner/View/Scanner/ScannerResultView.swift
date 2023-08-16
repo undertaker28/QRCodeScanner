@@ -97,7 +97,7 @@ struct ScannerResultView: View {
                 }
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
             }
-            .background(Color("Blue"))
+            .background(Color.accentColor)
             .cornerRadius(20)
             .foregroundColor(.white)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
