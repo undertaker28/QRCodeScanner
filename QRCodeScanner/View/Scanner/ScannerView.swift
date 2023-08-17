@@ -20,6 +20,7 @@ struct ScannerView: View {
     @StateObject private var qrDelegate = QRScannerDelegate()
     @State private var isCheckedCameraPermission: Bool = false
     @State var scannedObject: ScannedObject? = nil
+    @AppStorage("activeColor") private var activeAppMainColor: String = "Blue"
     
     var body: some View {
         NavigationView {
@@ -59,14 +60,14 @@ struct ScannerView: View {
                                 
                                 RoundedRectangle(cornerRadius: 2, style: .circular)
                                     .trim(from: 0.61, to: 0.64)
-                                    .stroke(Color.accentColor, style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                                    .stroke(Color(activeAppMainColor), style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                                     .rotationEffect(.init(degrees: rotation))
                             }
                         }
                         .frame(width: size.width, height: size.width)
                         .overlay(alignment: .top, content: {
                             Rectangle()
-                                .fill(Color.accentColor)
+                                .fill(Color(activeAppMainColor))
                                 .frame(height: 2.5)
                                 .shadow(color: .black.opacity(0.8), radius: 8, x: 0, y: isScanning ? 15 : -15)
                                 .offset(y: isScanning ? size.width : 0)

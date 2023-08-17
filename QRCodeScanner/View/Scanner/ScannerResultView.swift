@@ -16,6 +16,7 @@ struct ScannerResultView: View {
     @State private var showingAlert = false
     @State private var alertMessage = ""
     @State private var showBrowseButton = false
+    @AppStorage("activeColor") private var activeAppMainColor: String = "Blue"
     
     var body: some View {
         VStack {
@@ -97,7 +98,7 @@ struct ScannerResultView: View {
                 }
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
             }
-            .background(Color.accentColor)
+            .background(Color(activeAppMainColor))
             .cornerRadius(20)
             .foregroundColor(.white)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))

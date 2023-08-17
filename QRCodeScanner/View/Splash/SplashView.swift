@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SplashView: View {
-    @AppStorage("activeIcon") var activeIcon: String = ""
+    @AppStorage("activeIcon") var activeIcon: String = "AppIcon"
     @State private var isActive = false
     
     var body: some View {

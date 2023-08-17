@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var defaultTab = 1
+    @AppStorage("activeColor") private var activeAppMainColor: String = "Blue"
     
     var body: some View {
         TabView(selection: $defaultTab) {
@@ -40,7 +41,7 @@ struct ContentView: View {
                 }
                 .tag(4)
         }
-        .accentColor(Color.accentColor)
+        .accentColor(Color(activeAppMainColor))
     }
 }
 

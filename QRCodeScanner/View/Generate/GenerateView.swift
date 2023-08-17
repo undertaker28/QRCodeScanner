@@ -16,7 +16,7 @@ struct GenerateView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("You can create your QR code instantly by entering the text you want in the field below.")
+                Text("Generate QR codes quickly by inputting text.")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundColor(Color("Black"))
                     .font(Font.custom("MarkPro-Bold", size: 16))
@@ -28,7 +28,7 @@ struct GenerateView: View {
                     .foregroundColor(Color("Black"))
                     .font(Font.custom("MarkPro-Bold", size: 16))
                     .multilineTextAlignment(.center)
-                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 20))
+                    .padding(EdgeInsets(top: 1, leading: 20, bottom: 20, trailing: 20))
                 
                 TextField("Text to generate", text: $data)
                     .font(Font.custom("MarkPro-Bold", size: 12))

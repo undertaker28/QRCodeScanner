@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("activeIcon") private var activeAppIcon: String = "AppIcon"
+    @AppStorage("activeColor") private var activeAppMainColor: String = "Blue"
     @ObservedObject private var settingsViewModel = SettingsViewModel()
     let icons = Constants.icons
     let namesOfIcons = Constants.namesOfIcons
@@ -65,11 +66,14 @@ struct SettingsView: View {
                         .pickerStyle(.navigationLink)
                     }
                     .onChange(of: activeAppIcon, perform: { newValue in
+                        let index = icons.firstIndex(of: newValue) ?? 0
+                        activeAppMainColor = namesOfIcons[index]
                         UIApplication.shared.setAlternateIconName(newValue)
                     })
                     .font(Font.custom("MarkPro-Bold", size: 16))
                     .padding(6)
                 }
+                .listStyle(.insetGrouped)
             }
             .navigationBarTitle("Settings")
         }

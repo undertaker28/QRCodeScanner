@@ -13,6 +13,7 @@ struct HistoryRow: View {
     
     @State private var showingAlert = false
     @State private var alertMessage = ""
+    @AppStorage("activeColor") private var activeAppMainColor: String = "Blue"
     
     var body: some View {
         HStack {
@@ -68,7 +69,7 @@ struct HistoryRow: View {
         }
         .foregroundColor(.white)
         .frame(height: 60)
-        .background(Color.accentColor)
+        .background(Color(activeAppMainColor))
         .cornerRadius(15)
         .alert(isPresented: $showingAlert) {
             Alert(title: Text("Success"), message: Text(self.alertMessage), dismissButton: .default(Text("OK")))
