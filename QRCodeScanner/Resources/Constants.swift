@@ -18,8 +18,8 @@ struct Constants {
     }
     
     struct Fonts {
-        static let ExtraBold = "Nunito-ExtraBold"
-        static let Regular = "Nunito-Regular"
-        static let Light = "Nunito-Light"
+        static let Light = "MarkPro-Light"
+        static let Regular = "MarkPro-Regular"
+        static let Bold = "MarkPro-Bold"
     }
 }

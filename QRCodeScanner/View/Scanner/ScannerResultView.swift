@@ -23,7 +23,7 @@ struct ScannerResultView: View {
             Text("You can copy the QR information or easily share it with the application you want.")
                 .frame(maxWidth: .infinity, alignment: .top)
                 .foregroundColor(Color("Black"))
-                .font(Font.custom("MarkPro-Bold", size: 15))
+                .font(Font.custom(Constants.Fonts.Regular, size: 15))
                 .padding(30)
                 .multilineTextAlignment(.center)
             VStack {
@@ -41,7 +41,7 @@ struct ScannerResultView: View {
                     Text(scannedObject.scanDate ?? "")
                         .frame(maxWidth: .infinity, alignment: .center)
                         .foregroundColor(Color.white)
-                        .font(Font.custom("MarkPro-Bold", size: 17))
+                        .font(Font.custom(Constants.Fonts.Bold, size: 17))
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                 }
                 .padding(20)
@@ -56,7 +56,7 @@ struct ScannerResultView: View {
                 Text(scannedObject.data)
                     .frame(maxWidth: .infinity)
                     .foregroundColor(Color.white)
-                    .font(Font.custom("MarkPro-Bold", size: 20))
+                    .font(Font.custom(Constants.Fonts.Regular, size: 20))
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
                     .minimumScaleFactor(0.5)
                 

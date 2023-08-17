@@ -19,19 +19,19 @@ struct GenerateView: View {
                 Text("Generate QR codes quickly by inputting text.")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundColor(Color("Black"))
-                    .font(Font.custom("MarkPro-Bold", size: 16))
+                    .font(Font.custom(Constants.Fonts.Light, size: 16))
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
                 
                 Text("You can tap the code to share it.")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundColor(Color("Black"))
-                    .font(Font.custom("MarkPro-Bold", size: 16))
+                    .font(Font.custom(Constants.Fonts.Bold, size: 16))
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 1, leading: 20, bottom: 20, trailing: 20))
                 
                 TextField("Text to generate", text: $data)
-                    .font(Font.custom("MarkPro-Bold", size: 12))
+                    .font(Font.custom(Constants.Fonts.Bold, size: 12))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                 

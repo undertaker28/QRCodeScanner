@@ -26,14 +26,14 @@ struct HistoryRow: View {
                 
                 Text(scannedObject?.scanDate ?? "")
                     .foregroundColor(Color.white)
-                    .font(Font.custom("MarkPro-Bold", size: 8))
+                    .font(Font.custom(Constants.Fonts.Light, size: 8))
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
             }
             
             Text(scannedObject?.data ?? "")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color.white)
-                .font(Font.custom("MarkPro-Bold", size: 14))
+                .font(Font.custom(Constants.Fonts.Regular, size: 14))
                 .lineLimit(2)
                 .minimumScaleFactor(0.5)
                 .onTapGesture {

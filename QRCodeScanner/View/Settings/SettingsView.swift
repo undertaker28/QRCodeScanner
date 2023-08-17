@@ -18,7 +18,7 @@ struct SettingsView: View {
         NavigationView {
             VStack {
                 List {
-                    Section(header: Text("Scanner").font(Font.custom("MarkPro-Bold", size: 20))) {
+                    Section(header: Text("Scanner").font(Font.custom(Constants.Fonts.Bold, size: 20))) {
                         Toggle("Vibrate", isOn: $settingsViewModel.vibrate)
                             .onTapGesture {
                                 self.settingsViewModel.toggleVibrate()
@@ -44,10 +44,10 @@ struct SettingsView: View {
                                 self.settingsViewModel.toggleDisableDuplicates()
                             }
                     }
-                    .font(Font.custom("MarkPro-Bold", size: 16))
+                    .font(Font.custom(Constants.Fonts.Regular, size: 16))
                     .padding(6)
                     
-                    Section(header: Text("Appearance").font(Font.custom("MarkPro-Bold", size: 20))) {
+                    Section(header: Text("Appearance").font(Font.custom(Constants.Fonts.Bold, size: 20))) {
                         Picker(selection: $activeAppIcon) {
                             ForEach(0..<icons.count) { index in
                                 HStack {
@@ -70,7 +70,7 @@ struct SettingsView: View {
                         activeAppMainColor = namesOfIcons[index]
                         UIApplication.shared.setAlternateIconName(newValue)
                     })
-                    .font(Font.custom("MarkPro-Bold", size: 16))
+                    .font(Font.custom(Constants.Fonts.Regular, size: 16))
                     .padding(6)
                 }
                 .listStyle(.insetGrouped)
