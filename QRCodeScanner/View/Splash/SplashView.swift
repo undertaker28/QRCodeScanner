@@ -15,18 +15,22 @@ struct SplashView: View {
         if isActive {
             ContentView()
         } else {
-            Image(activeIcon + "-Preview")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 160, height: 160, alignment: .center)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
-                        withAnimation {
-                            self.isActive = true
+            ZStack {
+                Color("Background")
+                    .ignoresSafeArea()
+                Image(activeIcon + "-Preview")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 160, height: 160, alignment: .center)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+                            withAnimation {
+                                self.isActive = true
+                            }
                         }
                     }
-                }
+            }
         }
     }
 }

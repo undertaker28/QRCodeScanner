@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("activeIcon") private var activeAppIcon: String = "AppIcon"
+    @AppStorage("activeIcon") private var activeAppIcon: String = "AppIcon4"
     @AppStorage("activeColor") private var activeAppMainColor: String = "Blue"
     @ObservedObject private var settingsViewModel = SettingsViewModel()
     let icons = Constants.icons
@@ -49,7 +49,7 @@ struct SettingsView: View {
                     
                     Section(header: Text("Appearance").font(Font.custom(Constants.Fonts.Bold, size: 20))) {
                         Picker(selection: $activeAppIcon) {
-                            ForEach(0..<icons.count) { index in
+                            ForEach(0..<4) { index in
                                 HStack {
                                     Image(icons[index] + "-Preview")
                                         .resizable()
@@ -60,10 +60,8 @@ struct SettingsView: View {
                                 }
                                 .tag(icons[index])
                             }
-                        } label: {
-                            Text("Icon")
-                        }
-                        .pickerStyle(.navigationLink)
+                        } label: { }
+                        .pickerStyle(.inline)
                     }
                     .onChange(of: activeAppIcon, perform: { newValue in
                         let index = icons.firstIndex(of: newValue) ?? 0
@@ -74,8 +72,11 @@ struct SettingsView: View {
                     .padding(6)
                 }
                 .listStyle(.insetGrouped)
+                .scrollIndicators(.hidden)
             }
             .navigationBarTitle("Settings")
+            .scrollContentBackground(.hidden)
+            .background(Color("BackgroundForHistoryAndSettings"))
         }
     }
 }

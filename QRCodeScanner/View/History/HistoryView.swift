@@ -16,12 +16,13 @@ struct HistoryView: View {
                 List(historyViewModel.recentList) { data in
                     HistoryRow(scannedObject: data, historyViewModel: historyViewModel)
                 }
+                .scrollContentBackground(.hidden)
                 .toolbar {
                     Button(action: {
                         historyViewModel.deleteRecentList()
                     }) {
                         Image(systemName: "xmark.circle")
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("Black"))
                     }
                 }
             }
@@ -29,6 +30,7 @@ struct HistoryView: View {
                 historyViewModel.fetchRecentList()
             }
             .navigationBarTitle("History")
+            .background(Color("BackgroundForHistoryAndSettings"))
         }
     }
 }

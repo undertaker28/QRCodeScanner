@@ -39,12 +39,12 @@ struct ScannerView: View {
                 } else {
                     Text("Place the QR code inside the area")
                         .font(.custom(Constants.Fonts.Light, size: 20))
-                        .foregroundColor(.black.opacity(0.8))
+                        .foregroundColor(Color("Black").opacity(0.8))
                         .padding(.top, 20)
                     
                     Text("Scanning will start automatically")
                         .font(.custom(Constants.Fonts.Bold, size: 16))
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color("Black"))
                     
                     Spacer(minLength: 0)
                     
@@ -94,6 +94,9 @@ struct ScannerView: View {
             }
             .onChange(of: qrDelegate.scannedObject) { newValue in
                 if let code = newValue {
+                    if scannerViewModel.checkIfVibrate() {
+                        AudioServicesPlaySystemSound(SystemSoundID(4095))
+                    }
                     scannedObject = code
                     if scannerViewModel.checkIfSaveToRecentList() {
                         scannerViewModel.addToRecentList(scannedObject: scannedObject ?? ScannedObject(data: "", scanDate: "", type: .none), removeDuplicate: scannerViewModel.checkIfRemoveDuplicate())
@@ -106,6 +109,7 @@ struct ScannerView: View {
             .onDisappear {
                 session.stopRunning()
             }
+            .background(Color("Background"))
         }
     }
     

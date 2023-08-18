@@ -30,7 +30,7 @@ struct GenerateView: View {
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 1, leading: 20, bottom: 20, trailing: 20))
                 
-                TextField("Text to generate", text: $data)
+                TextField("", text: $data, prompt: Text("Text to generate").foregroundColor(Color("Black")))
                     .font(Font.custom(Constants.Fonts.Bold, size: 12))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
@@ -51,6 +51,7 @@ struct GenerateView: View {
                 Spacer()
             }
             .navigationBarTitle("Generate")
+            .background(Color("Background"))
         }
     }
 }

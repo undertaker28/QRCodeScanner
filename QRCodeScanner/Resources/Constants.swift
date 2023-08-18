@@ -8,8 +8,8 @@
 import Foundation
 
 struct Constants {
-    static let icons = ["AppIcon", "AppIcon1", "AppIcon2", "AppIcon3", "AppIcon4"]
-    static let namesOfIcons = ["Blue", "Green", "Orange", "Purple", "Black"]
+    static let icons = ["AppIcon1", "AppIcon2", "AppIcon3", "AppIcon4"]
+    static let namesOfIcons = ["Green", "Orange", "Purple", "Blue"]
     
     enum Permission: String {
         case idle = "Not Determined"
