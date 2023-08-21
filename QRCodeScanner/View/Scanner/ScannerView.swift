@@ -24,19 +24,19 @@ struct ScannerView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 8) {
-                if scannedObject != nil {
-                    ScannerResultView(scannedObject: scannedObject!,
-                                      parentView: self,
-                                      copyDataByDefault: scannerViewModel.checkIfCopyByDefault(),
-                                      browseByDefault: scannerViewModel.checkIfBrowseByDefault())
-                    .onDisappear {
-                        if !session.isRunning && cameraPermission == .approved {
-                            reactivateCamera()
-                            activateScannerAnimation()
-                        }
+            if scannedObject != nil {
+                ScannerResultView(scannedObject: scannedObject!,
+                                  parentView: self,
+                                  copyDataByDefault: scannerViewModel.checkIfCopyByDefault(),
+                                  browseByDefault: scannerViewModel.checkIfBrowseByDefault())
+                .onDisappear {
+                    if !session.isRunning && cameraPermission == .approved {
+                        reactivateCamera()
+                        activateScannerAnimation()
                     }
-                } else {
+                }
+            } else {
+                VStack(spacing: 8) {
                     Text("Place the QR code inside the area")
                         .font(.custom(Constants.Fonts.Light, size: 20))
                         .foregroundColor(Color("Black").opacity(0.8))
@@ -76,40 +76,41 @@ struct ScannerView: View {
                     }
                     .padding(.horizontal, 45)
                 }
-            }
-            .padding(15)
-            .navigationBarTitle(scannedObject == nil ? "Scanning..." : "Scanning Result", displayMode: .inline)
-            .onAppear(perform: checkCameraPermission)
-            .alert(errorMessage, isPresented: $showError) {
-                if cameraPermission == .denied {
-                    Button("Settings") {
-                        let settingsString = UIApplication.openSettingsURLString
-                        if let settingsURL = URL(string: settingsString) {
-                            openURL(settingsURL)
+                .padding(15)
+                .navigationBarTitle(scannedObject == nil ? "Scanning..." : "Scanning Result", displayMode: .inline)
+                .onAppear(perform: checkCameraPermission)
+                .alert(errorMessage, isPresented: $showError) {
+                    if cameraPermission == .denied {
+                        Button("Settings") {
+                            let settingsString = UIApplication.openSettingsURLString
+                            if let settingsURL = URL(string: settingsString) {
+                                openURL(settingsURL)
+                            }
                         }
+                        
+                        Button("Cancel", role: .cancel) { }
                     }
-                    
-                    Button("Cancel", role: .cancel) { }
                 }
-            }
-            .onChange(of: qrDelegate.scannedObject) { newValue in
-                if let code = newValue {
-                    if scannerViewModel.checkIfVibrate() {
-                        AudioServicesPlaySystemSound(SystemSoundID(4095))
+                .onChange(of: qrDelegate.scannedObject) { newValue in
+                    if let code = newValue {
+                        if scannerViewModel.checkIfVibrate() {
+                            AudioServicesPlaySystemSound(SystemSoundID(4095))
+                        }
+                        scannedObject = code
+                        if scannerViewModel.checkIfSaveToRecentList() {
+                            scannerViewModel.addToRecentList(scannedObject: scannedObject ?? ScannedObject(data: "", scanDate: "", type: .none), removeDuplicate: scannerViewModel.checkIfRemoveDuplicate())
+                        }
+                        
+                        session.stopRunning()
+                        deactivateScannerAnimation()
+                        qrDelegate.scannedObject = nil
                     }
-                    scannedObject = code
-                    if scannerViewModel.checkIfSaveToRecentList() {
-                        scannerViewModel.addToRecentList(scannedObject: scannedObject ?? ScannedObject(data: "", scanDate: "", type: .none), removeDuplicate: scannerViewModel.checkIfRemoveDuplicate())
-                    }
+                }
+                .onDisappear {
                     session.stopRunning()
-                    deactivateScannerAnimation()
-                    qrDelegate.scannedObject = nil
                 }
+                .background(Color("Background"))
             }
-            .onDisappear {
-                session.stopRunning()
-            }
-            .background(Color("Background"))
         }
     }
     
