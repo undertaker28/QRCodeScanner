@@ -29,12 +29,6 @@ struct ScannerView: View {
                                   parentView: self,
                                   copyDataByDefault: scannerViewModel.checkIfCopyByDefault(),
                                   browseByDefault: scannerViewModel.checkIfBrowseByDefault())
-                .onDisappear {
-                    if !session.isRunning && cameraPermission == .approved {
-                        reactivateCamera()
-                        activateScannerAnimation()
-                    }
-                }
             } else {
                 VStack(spacing: 8) {
                     Text("Place the QR code inside the area")
@@ -161,6 +155,7 @@ struct ScannerView: View {
         }
         isCheckedCameraPermission = true
         reactivateCamera()
+        activateScannerAnimation()
     }
     
     private func setupCamera() {

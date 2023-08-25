@@ -9,7 +9,7 @@ import Foundation
 import SwiftyUserDefaults
 
 final class HistoryViewModel: ObservableObject {
-    @Published var recentList: [ScannedObject] = []
+    @Published private(set) var recentList: [ScannedObject] = []
     
     func fetchRecentList() {
         recentList.removeAll()

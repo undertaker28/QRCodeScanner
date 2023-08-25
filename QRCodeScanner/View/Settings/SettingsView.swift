@@ -11,8 +11,8 @@ struct SettingsView: View {
     @AppStorage("activeIcon") private var activeAppIcon: String = "AppIcon4"
     @AppStorage("activeColor") private var activeAppMainColor: String = "Blue"
     @ObservedObject private var settingsViewModel = SettingsViewModel()
-    let icons = Constants.icons
-    let namesOfIcons = Constants.namesOfIcons
+    private let icons = Constants.icons
+    private let namesOfIcons = Constants.namesOfIcons
     
     var body: some View {
         NavigationView {
@@ -49,7 +49,7 @@ struct SettingsView: View {
                     
                     Section(header: Text("Appearance").font(Font.custom(Constants.Fonts.Bold, size: 20))) {
                         Picker(selection: $activeAppIcon) {
-                            ForEach(0..<4) { index in
+                            ForEach(0..<icons.count, id: \.self) { index in
                                 HStack {
                                     Image(icons[index] + "-Preview")
                                         .resizable()

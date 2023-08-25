@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ScannerResultView: View {
-    var scannedObject: ScannedObject
-    var parentView: ScannerView
-    var copyDataByDefault: Bool
-    var browseByDefault: Bool
+    private(set) var scannedObject: ScannedObject
+    private(set) var parentView: ScannerView
+    private(set) var copyDataByDefault: Bool
+    private(set) var browseByDefault: Bool
     
     @State private var showingAlert = false
     @State private var alertMessage = ""

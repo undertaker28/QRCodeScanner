@@ -9,8 +9,8 @@ import SwiftUI
 import AVKit
 
 struct CameraView: UIViewRepresentable {
-    var frameSize: CGSize
-    @Binding var session: AVCaptureSession
+    private(set) var frameSize: CGSize
+    @Binding private(set) var session: AVCaptureSession
     
     func makeUIView(context: Context) -> UIView {
         let view = UIViewType(frame: CGRect(origin: .zero, size: frameSize))
@@ -26,6 +26,5 @@ struct CameraView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        
     }
 }

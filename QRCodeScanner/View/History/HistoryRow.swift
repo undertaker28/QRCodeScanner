@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct HistoryRow: View {
-    var scannedObject: ScannedObject?
-    var historyViewModel: HistoryViewModel?
+    private let scannedObject: ScannedObject?
+    private let historyViewModel: HistoryViewModel
+    
+    init(scannedObject: ScannedObject? = nil, historyViewModel: HistoryViewModel) {
+        self.scannedObject = scannedObject
+        self.historyViewModel = historyViewModel
+    }
     
     @State private var showingAlert = false
     @State private var alertMessage = ""
@@ -64,7 +69,7 @@ struct HistoryRow: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
                 .onTapGesture {
                     print("Delete button was tapped")
-                    self.historyViewModel!.deleteRecentItem(scannedObject: self.scannedObject!)
+                    self.historyViewModel.deleteRecentItem(scannedObject: self.scannedObject ?? ScannedObject(data: "", scanDate: "", type: .none))
                 }
         }
         .foregroundColor(.white)
@@ -79,6 +84,6 @@ struct HistoryRow: View {
 
 struct HistoryRow_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryRow(scannedObject: ScannedObject(data: "https://habr.com/ru/articles/453986/", scanDate: "11.08.2023 21:10", type: .url))
+        HistoryRow(scannedObject: ScannedObject(data: "https://habr.com/ru/articles/453986/", scanDate: "11.08.2023 21:10", type: .url), historyViewModel: HistoryViewModel())
     }
 }
